@@ -5,6 +5,7 @@ h1{
     font-weight: 400;
     font-style: normal;
     margin-left: 10%;
+    margin-bottom: 2%;
     
 }
 
@@ -48,7 +49,8 @@ h4{
     }
 
     .ul_prog_leng{
-        margin-left: 20%;
+        margin-left: 15%;
+        margin-right: 30%;
         list-style-type: square;
         font-family: 'Oxygen', sans-serif;
         font-size: small;
@@ -56,6 +58,7 @@ h4{
 
 ul{
     margin-left: 10%;
+    margin-right: 10%;
     list-style-type: square;
     font-family: 'Oxygen', sans-serif;
     font-size: medium;
@@ -72,7 +75,7 @@ p{
 .italic{
     font-family: "Oxygen", sans-serif;
     font-style: italic;
-    font-size: small;
+    font-size: medium;
     justify-content: justify;
     margin-left: 10%;
     margin-right: 10%;
@@ -86,22 +89,38 @@ span{
     margin-right: 10%;
 }
 
+.container_grid{
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                gap: 20px; 
+                align-items: center; 
+            }
 
-.container{
-    display: flexbox;
-    justify-content: center;
-    margin-left: 15%;
-    
-    
+.container_about img{
+                    max-width: 100%;
+                    height: auto;
+                    }
+
+.container_about p{
+    font-size: small;
 }
 
-.container_soft{
+.container_logos {
     display: flexbox;
     justify-content: center;
-    margin-left: 25%;
-    justify-self: center;
-    
+    align-items: justify;
+    margin-left: 20%;
+    gap: 2px;
+    margin-top: 2px;
 }
+
+.container_logos img{
+    margin-left: 10%;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+
 
 .container_contact{
     justify-content: left;
@@ -112,6 +131,22 @@ span{
     
 }
 
+.container_contact_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    height: auto;
+    gap: 20px;    
+    
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+}
+
 .container_contact img{
     justify-content: left;
     align-items: left;
@@ -119,6 +154,21 @@ span{
     height: auto;
     gap: 20px;    
     
+}
+
+.container_soft {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    flex-wrap: wrap;        
+    gap: 20px;             
+}
+
+.container_soft p{
+    margin-top: 10px;      
+    text-align: left;
+    font-size: smaller;  
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
 }
 
 .container_redes{
@@ -146,6 +196,18 @@ span{
 
 .img_proyecto{
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    
+}
+
+.img_cont_proyecto_grande{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 5%;
+   
     
 }
 
