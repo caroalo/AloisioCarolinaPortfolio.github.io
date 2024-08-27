@@ -38,7 +38,7 @@ h4{
         margin-right: 10%;
     }
 
- h5{
+ h5, label{
         font-family: 'Roboto', sans-serif;
         font-weight: 100;
         font-style: normal;
@@ -112,6 +112,7 @@ span{
     margin-left: 20%;
     gap: 2px;
     margin-top: 2px;
+    background-color: white;
 }
 
 .container_logos img{
@@ -161,7 +162,8 @@ span{
     justify-content: center; 
     align-items: center;    
     flex-wrap: wrap;        
-    gap: 20px;             
+    gap: 20px;
+    background-color: white;             
 }
 
 .container_soft p{
@@ -226,7 +228,7 @@ span{
     height: 25px;
     }    
 
-.formu_short{
+.formu_short, input{
    background: rgb(251, 253, 255);
     font-family: font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 12px;
@@ -241,13 +243,14 @@ span{
     vertical-align: top;
    }    
 
-.formu_short_box{
+.formu_short_box, input{
     display: flex;
     justify-content: space-between;
     justify-content: space-around;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 12px;
     vertical-align: top;
+    width: 90%;
         
 }
 
@@ -270,13 +273,15 @@ span{
         background-color: rgb(245, 245, 249);
         color: black;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        padding: 10px 20px;
+        padding: 2px 20px;
         border: solid;
         border-color: rgb(199, 199, 242); 
         border-width: 1px;
         border-radius: 5px;
         cursor: pointer;
         margin-left: 40%;
+        width: 100px;
+        text-align: center;
       }
 
    

@@ -73,49 +73,57 @@
 </div>
 <br>
 
-
-    <div class>
-        <h5> Name:* </h5>
-        <div class="formu_short_box">
-        <input class="formu_short" type="text" id="name" required placeholder="Name"></label>
-        <input class="formu_short" type="text" id="lastname" required placeholder="Lastname"></label>
-     </div>
-     <br>
-    <div>
-        <div>
-            <h5> Company:* </h5>
-            <div class="formu_short_box">
-            <input class="formu_short" type="text" id="name" required placeholder="Company name"></label>
-            <input class="formu_short" type="text" id="lastname" required placeholder="Position"></label>
-            </div>
-            <br>
-        <div>
-        <h5> Telephone: * </h5>
-        <div class="formu_short_box">
-        <input class="formu_short" type="text" id="code" required placeholder="code">
-        <input class="formu_short" type="text" id="telephone" required placeholder="Telephone">
-    
-        </div>
-    </div>
-    <br>
-    <div>
-        <h5> e-mail: * </h5>
-        <input class="formu_long" type="text" id="email" required placeholder="email@email.com">
-    </div>
-    <br>
-    <div>
-       <h5> Mensaje: * </h5>
-        <input class="mensaje" type="text" id="message" required placeholder="Mensaje">
-    </div>
-<br>
-  
-        <br> <br>
-        <button class="boton" ref="" href="mailto:carolina.aloisio@gmail.com" >Enviar</button>
-    
+        <form id="form">
+        <div class="field">
+            <label for="from_name">Name: </label>
+            <input type="text" name="from_name" id="from_name">
+          </div>
+          <br>
+          <div class="field">
+            <label for="message">Message:</label>
+            <input class="mensaje" type="text" name="message" id="message">
+          </div>
+          <br>
+          <div class="field">
+            <label for="reply_to">Reply to: </label>
+            <input type="text" name="reply_to" id="reply_to">
+          </div>
+          <br>
         
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-      <br>
+          <input type="submit" class="boton" id="button" value="Send Email" >
+        </form>
+        
+        <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        
+        <script type="text/javascript">
+          emailjs.init('yC_9S_MVsoJT3ZEWp')
+        </script>
+
+        
+        <script>
+          const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_g428jwf';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Your e-mail was succesfullt sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+        </script>
+        <br>
       <br>
 </body>
 </html>
