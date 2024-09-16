@@ -1,0 +1,355 @@
+
+
+h1{
+    font-family: 'Oxygen', sans-serif; 
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 37%;
+    justify-content: right;
+    font-size: x-large;
+    
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 10%;
+    justify-content: right;
+    font-size: x-large;
+    
+}
+
+ h5, label{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        margin-left: 5%;
+        justify-content: right;
+        font-size: large;
+        
+    }
+
+    .ul_prog_leng{
+        margin-left: 15%;
+        margin-right: 30%;
+        list-style-type: square;
+        font-family: 'Oxygen', sans-serif;
+        font-size: small;
+    }
+
+ul{
+    margin-left: 10%;
+    margin-right: 10%;
+    list-style-type: square;
+    font-family: 'Oxygen', sans-serif;
+    font-size: medium;
+}
+
+p {
+    font-family: "Oxygen", sans-serif;
+    font-size: medium;
+    justify-content: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.italic{
+    font-family: "Oxygen", sans-serif;
+    font-style: italic;
+    font-size: medium;
+    justify-content: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+span{
+    font-family: "Oxygen", sans-serif;
+    font-size: medium;
+    justify-content: justify;
+    margin-left: 1%;
+    margin-right: 10%;
+}
+
+bold_span{
+    font-family: "Oxygen", sans-serif;
+    font-size: medium;
+    justify-content: justify;
+    }
+
+.container_grid{
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                gap: 20px; 
+                align-items: center; 
+            }
+
+.container_about img{
+                    max-width: 100%;
+                    height: auto;
+                    }
+
+.container_about p{
+    font-size: small;
+}
+
+.container_logos {
+    display: flexbox;
+    justify-content: center;
+    align-items: justify;
+    margin-left: 20%;
+    gap: 2px;
+    margin-top: 2px;
+    background-color: white;
+}
+
+.container_logos img{
+    margin-left: 10%;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+
+
+.container_contact{
+    justify-content: left;
+    align-items: left;
+    margin-left: 10%;
+    height: auto;
+    gap: 20px;    
+    
+}
+
+.container_contact_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    height: auto;
+    gap: 20px;    
+    
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+}
+
+.container_contact img{
+    justify-content: left;
+    align-items: left;
+    margin-left: 1%;
+    height: auto;
+    gap: 20px;    
+    
+}
+
+.container_soft {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    flex-wrap: wrap;        
+    gap: 20px;
+    background-color: white;             
+}
+
+.container_soft p{
+    margin-top: 10px;      
+    text-align: left;
+    font-size: smaller;  
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+}
+
+.container_redes{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 18%;
+    height: auto;
+    gap: 20px;    
+    
+}
+
+.container_redes img{
+             max-width: 100px;
+            height: auto;
+    
+}
+
+.container_portfolio_2{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 10%;
+     
+}
+.container_portfolio{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+     
+}
+
+.img_proyecto{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    
+}
+
+.img_cont_proyecto_grande{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+.cont_dashboard{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12%;
+    margin-right: 5%;
+}
+
+.cont_sinsombra{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12%;
+    margin-right: 5%;
+}
+
+.formu_long{
+    display: flex;
+    background:  rgb(251, 253, 255);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    border-top: #f8f7f7;
+    border-left: #f8f7f7;
+    border-right: #f8f7f7;
+    border-bottom: 1px solid rgb(199, 199, 242); 
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 25px;
+    }    
+
+.formu_short, input{
+   background: rgb(251, 253, 255);
+    font-family: font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    border: none;
+    border-bottom: 1px solid rgb(199, 199, 242);  
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 25px;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    vertical-align: top;
+   }    
+
+.formu_short_box, input{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    vertical-align: top;
+    width: 90%;
+        
+}
+
+
+.mensaje{ 
+    display: flex;
+    align-items: flex-start;
+    background:  rgb(251, 253, 255);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    border: none;
+    border-bottom: 1px solid rgb(199, 199, 242); 
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 180px;  
+    }
+
+    .boton {
+        background-color: rgb(245, 245, 249);
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 2px 20px;
+        border: solid;
+        border-color: rgb(199, 199, 242); 
+        border-width: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 40%;
+        width: 100px;
+        text-align: center;
+      }
+
+      .ol_negrita, h4 {
+        font-family: "Oxygen", sans-serif;
+        font-size: medium;
+        font-weight: bold;
+        justify-content: justify;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    
+    /* Estilo para los números de la lista principal en negrita */
+.main-nav {
+    list-style-type: decimal; /* Utiliza números para la lista principal */
+    font-weight: bold; /* Hace que los números estén en negrita */
+    padding-left: 15%; /* Añade un poco de sangría para los elementos de la lista */
+  }
+  
+  /* Estilo para los enlaces principales de la lista */
+  .main-nav > .main-item > a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold; /* No aplica negrita al texto del enlace */
+  }
+  
+  .main-nav > .main-item > a:visited {
+    color: blue;
+    font-weight: bold;
+
+  }
+  
+  /* Estilo para la lista anidada con letras */
+  .nested-list {
+    list-style-type: lower-alpha; /* Enumerar con letras: a, b, c, etc. */
+    padding-left: 20px;
+    font-weight: normal;
+  }
+  
+  /* Estilo para los enlaces en listas anidadas */
+  .nested-list > .nested-item > a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  
+  .nested-list > .nested-item > a:visited {
+    color: blue;
+    font-weight: normal;
+  }
+  
+  
