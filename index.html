@@ -1,276 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aloisio, Carolina _ Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carolina Aloisio, PhD — Portfolio</title>
+<meta name="description" content="Carolina Aloisio, PhD — Data, systems, and project leadership across analytics, data engineering, systems analysis, and project management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style/style.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="js/theme.js"></script>
 </head>
+<body>
 
-<body> <!-- Contenido de Bootstrap va en el body, link en header, script al último -->
-
-  <nav class="navbar bg-body-tertiary fixed-top"> 
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"> </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            </li>
-            <a class="nav-link" href="#projects"> Projects</a>
-            </li>
-            <li class="nav-item">
-            </li>
-              <a class="nav-link" href="#skills"> Skills</a>
-            </li>
-            <li class="nav-item">
-            
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact me </a>
-          </ul>
-          
-          
-        </div>
-      </div>
-    </div>
+<header class="topbar">
+  <div class="brand">Carolina Aloisio, PhD</div>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#contact">Contact</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
   </nav>
+</header>
 
-  <br>
-    <img id="home" src="img/Banner_Secciones_Portfolio.png" alt="Banner" style="width: 100%; height: auto;">
-
-      <h2> The future is technology </h2>
-  
-  
-    <!--<section id="about_me"> 
-      
-       <div style="width: 90%;"><div style="position: relative; margin-left: 10%; padding-bottom: 56.25%; padding-top: 5%; height: 0;"><iframe title="CV Corporativo" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/66e4ad99210207c31eed8708" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
-        
-    <br>
-   </section>-->
-   <br>
-   <br>
-   <br>
-   <br>
-   <section id = "projects"> 
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1> PROJECTS </h1>
-      <h3>Data cleaning and analysis </h3>
-      <div class="container_portfolio_2">  
-        <a href="S1_SQL_Sales.html">
-          <img class="img_proyecto" src="img/Tapa_SQL_Sales.png" alt="S1_SQL_sales" style="width: 180%;" >
-          </a>
-         <br>
-         <br>
-            <a class="container_portfolio" href="P1_Python.html">
-              <img class="img_proyecto" src="img/Python_DataTransf_TAPA.png" alt="Dashboard_ProductSales" style="width: 45%;"></a>      
-        </div>
-
-      
-        
-    <br>
-        <h3>Data analysis and visualization </h3>
-        <div class="container_portfolio">  
-        <a href="D2_SalesReport.html"><img class="img_proyecto" src="img/Dashboard_SalesReport.png" alt="sales_report" style="width: 100%;">
-          </a>
-         
-            <a class="container_portfolio" href="D4_ProductSales.html">
-              <img class="img_proyecto" src="img/Dashboard_ProductSales.png" alt="Dashboard_ProductSales" style="width: 85%;"></a>
-          <a href="D3_Dengue.html"><img class="img_proyecto" src="img/dengue_d1.png" alt="dengue_cases" style="width: 100%;">
-          </a>
-          <br>
-      
-        </div>
-        <br>
-        <br>
-
-        <h3> Web design and development </h3>
-  
-    
-        <div class="container_portfolio_2">  
-          <a href="https://farmaciamengo.github.io/">
-            <img class="img_proyecto" src="img/webFarmacia_portada.png" alt="S1_SQL_sales" style="width: 100%;" >
-            </a>
-            
-              <a class="container_portfolio" href="https://app-ropa.netlify.app/"> 
-                <div>
-              <img class="img_proyecto" src="img/App-ropa_portada.png" alt="Dashboard_ProductSales" style="width: 100%;"> </a>    
-              </div>  
-          </div>
-        
-          <div class="container_portfolio_2">  
-            <a href="https://apimercadolibredisofttp3.netlify.app/">
-              <img class="img_proyecto" src="img/App-ML_portada.png" alt="App_ML" style="width: 100%;" >
-              </a>
-              
-                <a class="container_portfolio" href="https://github.com/caroalo/GestionTurnosFrontEnd"> 
-                  <div>
-                <img class="img_proyecto" src="img/gestionTurnos_portada.png" alt="Dashboard_ProductSales" style="width: 100%;"> </a>    
-                </div>  
-            </div>
-        <h3> Pitch Deck Development </h3>
-        <div class="container_portfolio_2">
-          <a href="K1_MESS.html">
-            <img class="img_proyecto" src="img/Deck_D1_d.png" alt="Mess" style="width: 70%;" >
-            </a>
-                 
-          <a href="K2_postvid.html">
-            <img class="img_proyecto" src="img/K2_d3.png" alt="postvid" style="width: 70% ;" >
-            </a>
-      </div>
-
-    <br>
-
-    
-  
-
-    <h3> Scientific data analysis and visualization </h3>
-  
-    
-    <div class="container_portfolio_2">  
-      <a href="C1_ACV.html">
-        <img class="img_proyecto" src="img/Perm.png" alt="S1_SQL_sales" style="width: 80%;" >
-        </a>
-        
-          <a class="container_portfolio" href="C2_Solub.html">
-            <img class="img_proyecto" src="img/Solub.png" alt="Dashboard_ProductSales" style="width: 120%;"></a>      
-      </div>
-    <br>
-    <br>
-    <br>
-    <br>
-  </section>
-       
-      <section id="skills">
-        <br>
-        <br>
-        <h1 > SKILLS </h1>
-        <br>
-        <h3>Data tools:</h3>
-        <div class="container_logos">
-            <img src="img/logo_sql.jpg" alt="logo_sql" style="width: 60px;">
-            <img src="img/python_logo.png" alt="logo_python" style="width: 60px;">
-            <img src="img/BI_logo.png" alt="logo_PowerBI" style="width: 50px;">
-            <img src="img/excel_logo.png" alt="logo_excel" style="width: 60px;">
-            <br>
-            <img src="img/logo_access.jpg" alt="logo_access" style="width: 60px;">
-            <img src="img/logo_pandas.jpg" alt="logo_pandas" style="width: 60px;">
-            <img src="img/logo_jupyter.png" alt="logo_jupyter" style="width: 60px;">
-            <img src="img/logo_numpy.png" alt="logo_numpy" style="width: 60px;">
-         </div>
-            <br> 
-       <h3>Languages: </h3>
-        <div class="container_contact">
-          <img src="img/espanol_logo.jpg" alt="bandera_españa" style="width: 50px"> 
-          <span> Spanish: native </span>
-          <br>
-          <img src="img/ingles_logo.png" alt="bandera_usa"  style="width: 50px;"> 
-          <span> English: Advanced. Oral and written fluency. </span>
-          <br>
-          <img src="img/brazil_logo.png" alt="bandera_brazil"  style="width: 50px;">
-          <span>Portuguese: Advanced. Oral and written fluency.</span>
-        </div>
-          
-    <br>
-          <h3>Development tools:</h3>
-            <div class="container_logos">
-                <img src="img/logo_html.png" alt="logo_html" style="width: 70px;">
-                <img src="img/logo_css.jpg" alt="logo_python" style="width: 70px;">
-                <img src="img/logo_js.jpg" alt="logo_PowerBI" style="width: 70px;">
-                <img src="img/python_logo.png" alt="logo_excel" style="width: 70px;">
-                <img src="img/logo_react.png" alt="logo_react" style="width: 90px;">
-           </div>
-            <br>
-         <h3>Other programming languages and tools:</h3>
-            <ul class="ul_prog_leng">
-              <li> C</li>
-              <li> Kotlin</li>
-              <li> Dr. Racket</li>
-              <li>Visual studio code</li>
-              <li>Star UML</li>
-            </ul>
-    <br>
-    <br>
-                 
-    <h3> Soft skills: </h3> 
-    <div class="container_soft">
-        <div class="image_item">
-          <img src="img/comunicacion skills.png" alt="comunication" width="80px">
-          <p> Communication skills</p>
-        </div>
-    
-        <div class="image_item">
-          <img src="img/adaptability.png" alt="adaptability" width="80px">
-          <p> Adaptability</p>
-        </div>
-    
-        <div class="image_item">
-          <img src="img/critical thinking.png" alt="critical_thinking" width="70px">
-          <p> Critical thinking</p>
-        </div>
-    
-    
-      <div class="image_item">
-        <img src="img/cultural competence.png" alt="cultural_competence" width="80px">
-        <p> Cultural competence </p>
-      </div>
-    
-      <div class="image_item">
-        <img src="img/leadership.png" alt="leadership" width="80px">
-      <p> Leadership </p>
-      </div>
-    
-      <div class="image_item">
-        <img src="img/problem solving.png" alt="problem_solving" width="70px">
-        <p> Problem solving</p>
-      </div>
-    
-      <div class="image_item">
-        <img src="img/teamwork.png" alt="teamwork" width="80px">
-        <p> Team work</p>
-      </div>
-    
-      <div class="image_item">
-        <img src="img/timemanagement.png" alt="timemanagement" width="70px">
-        <p> Time management </p>
-      </div>
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Carolina Aloisio, <span class="phd">PhD</span></h1>
+    <div class="kicker">Data · Systems · Projects</div>
+    <p class="lead">I help organizations turn complex data and systems into operational decisions. End-to-end ownership across analytics, data engineering, systems analysis, and project management.</p>
+    <div class="meta" id="contact">
+      <span>San Francisco, Córdoba</span>
+      <span class="sep">·</span>
+      <span>English · Spanish · Portuguese</span>
+      <span class="sep">·</span>
+      <a href="mailto:carolina.aloisio@gmail.com">Email</a>
+      <span class="sep">·</span>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-    
-        <br>
-        <br>
-      </section>
-    
-      <section id="portfolio">
-        <br>
-        <br>
+  </div>
+</section>
 
-   
-    <br>
-    <br>
-      </section>
-    
+<section id="work">
+  <div class="section-header">
+    <h2>Selected work</h2>
+    <span class="count">6 case studies</span>
+  </div>
 
+  <div class="cards">
 
+    <a class="card" href="case-stewardship.html">
+      <div class="tags">
+        <span class="tag">Healthcare</span>
+        <span class="tag">Analytics lead</span>
+        <span class="tag">Stakeholder engagement</span>
+        <span class="tag pro">Professional</span>
+      </div>
+      <h3>Stewardship analytics infrastructure</h3>
+      <p>Built the data access, audit pipeline, and KPI tracking that enabled a clinical committee to measurably improve prescription quality and reduce institutional spend.</p>
+      <div class="stack">SQL Server · Python · Cross-functional delivery</div>
+    </a>
 
+    <a class="card" href="case-ml-pipeline.html">
+      <div class="tags">
+        <span class="tag">Life sciences R&amp;D</span>
+        <span class="tag">Data science</span>
+        <span class="tag">Process optimization</span>
+        <span class="tag pro">Professional</span>
+      </div>
+      <h3>ML pipeline for process optimization</h3>
+      <p>Replaced a multi-year classical statistical workflow with a reproducible ML pipeline, delivering equivalent results in a fraction of the time with added predictive validation.</p>
+      <div class="stack">Python · scikit-learn · Reproducible workflows</div>
+    </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <a class="card" href="case-system-gap.html">
+      <div class="tags">
+        <span class="tag">Healthcare IT</span>
+        <span class="tag">Systems analysis</span>
+        <span class="tag">Requirements engineering</span>
+        <span class="tag pro">Professional</span>
+      </div>
+      <h3>Information system gap analysis</h3>
+      <p>Identified critical data structure limitations blocking analytical use of the clinical information system and delivered a prioritized recommendation to leadership.</p>
+      <div class="stack">Requirements documentation · SQL Server</div>
+    </a>
+
+    <a class="card" href="case-survey-dashboard.html">
+      <div class="tags">
+        <span class="tag">Public policy</span>
+        <span class="tag">Data engineering</span>
+        <span class="tag">Dashboarding</span>
+        <span class="tag edu">Applied coursework</span>
+      </div>
+      <h3>Survey data pipeline and dashboard</h3>
+      <p>Cleaned a 507-record citizen survey, built a 13-step reproducible Python pipeline, and delivered an interactive Power BI dashboard with policy-actionable findings.</p>
+      <div class="stack">Python · RapidFuzz · Power BI</div>
+    </a>
+
+    <a class="card" href="case-pmbok.html">
+      <div class="tags">
+        <span class="tag">Project management</span>
+        <span class="tag">Risk analysis</span>
+        <span class="tag">PMBOK</span>
+        <span class="tag edu">Applied coursework</span>
+      </div>
+      <h3>ERP risk management framework</h3>
+      <p>Applied the PMBOK 7-process framework to an ERP rollout, including quantitative risk monetization, contingency reserve calculation, and integrated response planning.</p>
+      <div class="stack">PMBOK · ISO 9001 · EMV analysis</div>
+    </a>
+
+    <a class="card" href="case-no-show.html">
+      <div class="tags">
+        <span class="tag">Healthcare</span>
+        <span class="tag">Predictive modeling</span>
+        <span class="tag">Operations analytics</span>
+        <span class="tag edu">Applied coursework</span>
+      </div>
+      <h3>No-show predictive scoring system</h3>
+      <p>Designed a binary classification and risk scoring framework with operational thresholds for overbooking, targeted outreach, and standard monitoring.</p>
+      <div class="stack">LightGBM · Risk scoring · Decision systems</div>
+    </a>
+
+  </div>
+</section>
+
+<section id="capabilities" class="capabilities">
+  <h2>Capabilities</h2>
+  <div class="cap-grid" style="margin-top: 1.75rem;">
+    <div>
+      <h3>Business and stakeholder engagement</h3>
+      <p>Requirements gathering, KPI definition, executive reporting, cross-functional facilitation.</p>
+    </div>
+    <div>
+      <h3>Analytics and BI delivery</h3>
+      <p>Power BI, Looker, SQL, ETL pipelines, data modeling.</p>
+    </div>
+    <div>
+      <h3>Data science and automation</h3>
+      <p>Python, scikit-learn, ML modeling, AI-assisted workflows.</p>
+    </div>
+    <div>
+      <h3>Project and risk management</h3>
+      <p>PMBOK, ISO 9001, risk monetization, stakeholder coordination.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Carolina Aloisio — Built with HTML and CSS
+</footer>
+
 </body>
 </html>

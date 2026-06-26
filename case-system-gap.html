@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Information system gap analysis — Carolina Aloisio, PhD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><a href="index.html" style="color: inherit; text-decoration: none;">Carolina Aloisio, PhD</a></div>
+  <nav>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#capabilities">Capabilities</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<div class="case-hero">
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+  <h1>Clinical information system gap analysis</h1>
+  <p class="one-liner">Identified critical data structure and interface limitations blocking analytical use of the clinical information system, and delivered a prioritized recommendation that informed the institution's data quality roadmap.</p>
+  <div class="meta-tags">
+    <span class="tag">Healthcare IT</span>
+    <span class="tag">Systems analysis</span>
+    <span class="tag">Requirements engineering</span>
+    <span class="tag">Stakeholder communication</span>
+    <span class="tag pro">Professional</span>
+  </div>
+</div>
+
+<div class="case-body">
+
+<h2>Context</h2>
+<p>A multidisciplinary clinical committee at a tertiary care hospital was launching an analytics initiative to monitor antimicrobial prescription practices, multi-resistant organism prevalence, and patient outcomes. Effective execution depended on reliable access to clinical data through the hospital information system, which had been designed primarily for transactional clinical use rather than analytical reporting.</p>
+
+<h2>Problem</h2>
+<p>Initial data exploration revealed structural barriers that prevented the committee from operating with the data quality and granularity its analytical mandate required. Critical clinical information (deceased patient status, multi-resistant organism colonization, isolation indicators) was either embedded in free-text fields, encoded with ambiguous abbreviations, or not differentiated at the data model level. These limitations were invisible to clinical end users but blocked any systematic analytical use of the data and created downstream risks for data quality, operational efficiency, and clinical safety reporting.</p>
+
+<h2>My role</h2>
+<p>Acted as the bridge between the clinical committee and hospital IT. Owned the systems-level assessment, the negotiation of expanded data access, and the formal recommendation to medical and IT leadership.</p>
+
+<h2>Approach</h2>
+<ul>
+  <li><strong>Stakeholder coordination:</strong> Engaged hospital IT leadership directly to expand data access permissions from read-only to query-capable, enabling cross-table analysis previously not feasible.</li>
+  <li><strong>System exploration and mapping:</strong> Documented the relational structure of the clinical information system, identifying how data flowed between patient records, medication orders, clinical events, and microbiology modules.</li>
+  <li><strong>Coordinated reporting layer request:</strong> Worked with the hospital information system vendor's technical contact to scope a consolidated reporting view aligned with the analytical requirements of the stewardship program.</li>
+  <li><strong>Gap identification:</strong> Catalogued specific interface and data model limitations that compromised analytical use, focusing on those with clinical safety implications.</li>
+  <li><strong>Structured recommendation:</strong> Delivered a written recommendation to medical leadership prioritizing high-impact, low-effort interface improvements.</li>
+  <li><strong>Documentation and handover:</strong> Maintained a written record of system limitations, access negotiations, and proposed changes to support follow-up and continuity.</li>
+</ul>
+
+<h2>Gap analysis</h2>
+<div class="diagram-wrap">
+<svg width="100%" viewBox="0 0 680 540" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Clinical information system gap analysis</title>
+<defs><marker id="arrow3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<text class="th" x="40" y="30">Current state</text>
+<text class="th" x="370" y="30">Recommended state</text>
+<g class="c-gray"><rect x="40" y="60" width="180" height="36" rx="8" stroke-width="0.5"/><text class="th" x="130" y="78" text-anchor="middle" dominant-baseline="central">Isolation status</text></g>
+<g class="c-red"><rect x="40" y="106" width="280" height="72" rx="8" stroke-width="0.5"/><text class="ts" x="180" y="124" text-anchor="middle" dominant-baseline="central">Ambiguous text code in summary</text><text class="ts" x="180" y="142" text-anchor="middle" dominant-baseline="central">Lost after discharge</text><text class="ts" x="180" y="160" text-anchor="middle" dominant-baseline="central">Resistant organisms in free text</text></g>
+<g class="c-teal"><rect x="370" y="106" width="270" height="72" rx="8" stroke-width="0.5"/><text class="ts" x="505" y="124" text-anchor="middle" dominant-baseline="central">Explicit, persistent indicator</text><text class="ts" x="505" y="142" text-anchor="middle" dominant-baseline="central">Surfaced in patient summary</text><text class="ts" x="505" y="160" text-anchor="middle" dominant-baseline="central">Structured, filterable field</text></g>
+<line x1="320" y1="142" x2="368" y2="142" class="arr" marker-end="url(#arrow3)"/>
+<g class="c-gray"><rect x="40" y="200" width="180" height="36" rx="8" stroke-width="0.5"/><text class="th" x="130" y="218" text-anchor="middle" dominant-baseline="central">Critical clinical events</text></g>
+<g class="c-red"><rect x="40" y="246" width="280" height="72" rx="8" stroke-width="0.5"/><text class="ts" x="180" y="264" text-anchor="middle" dominant-baseline="central">Death captured in free text</text><text class="ts" x="180" y="282" text-anchor="middle" dominant-baseline="central">No structured event flag</text><text class="ts" x="180" y="300" text-anchor="middle" dominant-baseline="central">Not queryable at scale</text></g>
+<g class="c-teal"><rect x="370" y="246" width="270" height="72" rx="8" stroke-width="0.5"/><text class="ts" x="505" y="264" text-anchor="middle" dominant-baseline="central">Structured fields, dropdowns</text><text class="ts" x="505" y="282" text-anchor="middle" dominant-baseline="central">Unambiguous event capture</text><text class="ts" x="505" y="300" text-anchor="middle" dominant-baseline="central">Available for analytics</text></g>
+<line x1="320" y1="282" x2="368" y2="282" class="arr" marker-end="url(#arrow3)"/>
+<g class="c-gray"><rect x="40" y="340" width="180" height="36" rx="8" stroke-width="0.5"/><text class="th" x="130" y="358" text-anchor="middle" dominant-baseline="central">Patient record lifecycle</text></g>
+<g class="c-red"><rect x="40" y="386" width="280" height="72" rx="8" stroke-width="0.5"/><text class="ts" x="180" y="404" text-anchor="middle" dominant-baseline="central">Active and deceased mixed</text><text class="ts" x="180" y="422" text-anchor="middle" dominant-baseline="central">Risk of inappropriate orders</text><text class="ts" x="180" y="440" text-anchor="middle" dominant-baseline="central">Unnecessary data retention</text></g>
+<g class="c-teal"><rect x="370" y="386" width="270" height="72" rx="8" stroke-width="0.5"/><text class="ts" x="505" y="404" text-anchor="middle" dominant-baseline="central">Differentiated at data model</text><text class="ts" x="505" y="422" text-anchor="middle" dominant-baseline="central">Safer downstream workflows</text><text class="ts" x="505" y="440" text-anchor="middle" dominant-baseline="central">Cleaner analytical datasets</text></g>
+<line x1="320" y1="422" x2="368" y2="422" class="arr" marker-end="url(#arrow3)"/>
+<g class="c-amber"><rect x="40" y="486" width="600" height="32" rx="8" stroke-width="0.5"/><text class="ts" x="340" y="504" text-anchor="middle" dominant-baseline="central">Delivered as a prioritized recommendation to medical leadership and IT</text></g>
+</svg>
+</div>
+
+<h2>Outcome</h2>
+<ul>
+  <li><strong>Expanded analytical access</strong> to the clinical information system, enabling cross-table analysis that the committee could not previously perform.</li>
+  <li><strong>Formal documentation</strong> of system limitations delivered to medical leadership, providing the institution with a prioritized roadmap of data quality improvements.</li>
+  <li><strong>Improved data foundation</strong> for downstream stewardship analytics that previously would have required workarounds or manual extraction.</li>
+  <li><strong>Established working channel</strong> between the clinical committee and hospital IT, supporting ongoing data quality discussions beyond the initial scope.</li>
+</ul>
+
+<h2>Industrial relevance</h2>
+<p>For healthcare organizations, regulated industries, and any setting where transactional systems are repurposed for analytics, this kind of gap analysis is where data initiatives succeed or fail. The work requires the combination of clinical or domain literacy, data modeling judgment, and the diplomatic skill to translate technical findings into recommendations that non-technical leadership will act on. Teams that lack this profile typically discover the gaps after committing to a reporting architecture, at significantly higher cost.</p>
+
+<h2>Stack</h2>
+<div class="stack-line">SQL Server · Hospital information system integration · Requirements documentation · Cross-functional stakeholder communication</div>
+
+<div class="confidentiality">Project details abstracted to protect institutional and patient confidentiality.</div>
+
+</div>
+
+<footer>© 2026 Carolina Aloisio</footer>
+
+</body>
+</html>

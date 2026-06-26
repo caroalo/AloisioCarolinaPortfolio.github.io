@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stewardship analytics infrastructure — Carolina Aloisio, PhD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><a href="index.html" style="color: inherit; text-decoration: none;">Carolina Aloisio, PhD</a></div>
+  <nav>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#capabilities">Capabilities</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<div class="case-hero">
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+  <h1>Antimicrobial stewardship analytics infrastructure</h1>
+  <p class="one-liner">Built the data access, audit pipeline, and KPI tracking that enabled a clinical committee to measurably improve antimicrobial prescription quality and reduce institutional drug spend.</p>
+  <div class="meta-tags">
+    <span class="tag">Healthcare</span>
+    <span class="tag">Analytics lead</span>
+    <span class="tag">Stakeholder engagement</span>
+    <span class="tag">SQL Server</span>
+    <span class="tag">Python</span>
+    <span class="tag pro">Professional</span>
+  </div>
+</div>
+
+<div class="case-body">
+
+<h2>Context</h2>
+<p>A tertiary care hospital with high-complexity services (cardiovascular surgery, neurosurgery, and multi-organ transplant programs) operates an antimicrobial stewardship program led by a multidisciplinary committee of infectious disease specialists, pharmacists, microbiologists, and clinical staff. Medical leadership had flagged inappropriate use of a key broad-spectrum antibiotic in general inpatient wards as an urgent operational and clinical priority.</p>
+
+<h2>Problem</h2>
+<p>The committee needed to audit prescription practices, design targeted interventions, and measure their impact across Internal Medicine and General Surgery. Baseline reporting was fragmented: prescription data, microbiology results, and clinical events lived in separate modules of the hospital information system, with no integrated view supporting the recurring adequacy indicators the program design required. Without consolidated data, the committee could not run the prospective audits, feedback cycles, and consumption tracking that the methodology demanded.</p>
+
+<h2>My role</h2>
+<p>Sole data analyst embedded in the stewardship committee. End-to-end ownership of data access negotiation, exploratory analysis, KPI operationalization, audit data structuring, and reporting to medical leadership. Acted as the bridge between the clinical committee and hospital IT.</p>
+
+<h2>Approach</h2>
+<ul>
+  <li><strong>Data access strategy:</strong> Partnered with hospital IT to expand query access across previously siloed modules. Documented relational structure to enable cross-table analysis previously not feasible.</li>
+  <li><strong>Requirements gathering:</strong> Worked with infectious disease specialists, pharmacy, and microbiology leads to translate clinical questions into a measurable indicator framework covering structure, process, and outcome dimensions.</li>
+  <li><strong>KPI design:</strong> Operationalized indicators aligned with international stewardship standards, including prescription adequacy, 48-hour review rate, training coverage, and consumption in Defined Daily Doses per 100 patient-days.</li>
+  <li><strong>Audit pipeline:</strong> Structured the data flow supporting twice-weekly prospective audits with face-to-face feedback to prescribing physicians. Auditing scaled from 22 baseline cross-sections to 67 during the intervention window.</li>
+  <li><strong>Systems gap analysis:</strong> Identified critical data quality issues in the clinical information system and submitted a structured recommendation to medical and IT leadership for interface improvements.</li>
+  <li><strong>Reporting cadence:</strong> Delivered recurring committee-facing analyses that fed directly into intervention design across three workstreams (guideline update, targeted education, prospective audit).</li>
+</ul>
+
+<h2>Architecture</h2>
+<div class="diagram-wrap">
+<svg width="100%" viewBox="0 0 680 520" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Antimicrobial stewardship analytics architecture</title>
+<defs><marker id="arrow1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<text class="th" x="40" y="30">Source systems</text>
+<g class="c-gray"><rect x="40" y="50" width="160" height="56" rx="8" stroke-width="0.5"/><text class="th" x="120" y="74" text-anchor="middle" dominant-baseline="central">Patient records</text><text class="ts" x="120" y="92" text-anchor="middle" dominant-baseline="central">Admissions, demographics</text></g>
+<g class="c-gray"><rect x="40" y="122" width="160" height="56" rx="8" stroke-width="0.5"/><text class="th" x="120" y="146" text-anchor="middle" dominant-baseline="central">Medication orders</text><text class="ts" x="120" y="164" text-anchor="middle" dominant-baseline="central">Prescriptions, dosing</text></g>
+<g class="c-gray"><rect x="40" y="194" width="160" height="56" rx="8" stroke-width="0.5"/><text class="th" x="120" y="218" text-anchor="middle" dominant-baseline="central">Clinical events</text><text class="ts" x="120" y="236" text-anchor="middle" dominant-baseline="central">Diagnoses, evolutions</text></g>
+<g class="c-gray"><rect x="40" y="266" width="160" height="56" rx="8" stroke-width="0.5"/><text class="th" x="120" y="290" text-anchor="middle" dominant-baseline="central">Microbiology</text><text class="ts" x="120" y="308" text-anchor="middle" dominant-baseline="central">Cultures, resistance</text></g>
+<line x1="200" y1="78" x2="258" y2="170" class="arr" marker-end="url(#arrow1)"/>
+<line x1="200" y1="150" x2="258" y2="170" class="arr" marker-end="url(#arrow1)"/>
+<line x1="200" y1="222" x2="258" y2="180" class="arr" marker-end="url(#arrow1)"/>
+<line x1="200" y1="294" x2="258" y2="190" class="arr" marker-end="url(#arrow1)"/>
+<text class="th" x="260" y="30">Data layer</text>
+<g class="c-blue"><rect x="260" y="140" width="160" height="64" rx="8" stroke-width="0.5"/><text class="th" x="340" y="166" text-anchor="middle" dominant-baseline="central">ETL pipeline</text><text class="ts" x="340" y="184" text-anchor="middle" dominant-baseline="central">SQL Server, Python</text></g>
+<g class="c-blue"><rect x="260" y="220" width="160" height="64" rx="8" stroke-width="0.5"/><text class="th" x="340" y="246" text-anchor="middle" dominant-baseline="central">Analytical dataset</text><text class="ts" x="340" y="264" text-anchor="middle" dominant-baseline="central">Integrated audit view</text></g>
+<line x1="340" y1="204" x2="340" y2="216" class="arr" marker-end="url(#arrow1)"/>
+<line x1="420" y1="252" x2="478" y2="170" class="arr" marker-end="url(#arrow1)"/>
+<line x1="420" y1="252" x2="478" y2="242" class="arr" marker-end="url(#arrow1)"/>
+<line x1="420" y1="252" x2="478" y2="314" class="arr" marker-end="url(#arrow1)"/>
+<text class="th" x="480" y="30">Analytical outputs</text>
+<g class="c-teal"><rect x="480" y="140" width="160" height="64" rx="8" stroke-width="0.5"/><text class="th" x="560" y="166" text-anchor="middle" dominant-baseline="central">KPI tracking</text><text class="ts" x="560" y="184" text-anchor="middle" dominant-baseline="central">Adequacy, DDD, review</text></g>
+<g class="c-teal"><rect x="480" y="212" width="160" height="64" rx="8" stroke-width="0.5"/><text class="th" x="560" y="238" text-anchor="middle" dominant-baseline="central">Audit cross-sections</text><text class="ts" x="560" y="256" text-anchor="middle" dominant-baseline="central">Prospective feedback</text></g>
+<g class="c-teal"><rect x="480" y="284" width="160" height="64" rx="8" stroke-width="0.5"/><text class="th" x="560" y="310" text-anchor="middle" dominant-baseline="central">Committee reports</text><text class="ts" x="560" y="328" text-anchor="middle" dominant-baseline="central">Trends, consumption</text></g>
+<text class="th" x="40" y="400">Stakeholders</text>
+<g class="c-purple"><rect x="40" y="420" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="130" y="444" text-anchor="middle" dominant-baseline="central">Stewardship committee</text><text class="ts" x="130" y="462" text-anchor="middle" dominant-baseline="central">ID, pharmacy, microbiology</text></g>
+<g class="c-purple"><rect x="240" y="420" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="330" y="444" text-anchor="middle" dominant-baseline="central">Prescribing physicians</text><text class="ts" x="330" y="462" text-anchor="middle" dominant-baseline="central">Internal medicine, surgery</text></g>
+<g class="c-purple"><rect x="440" y="420" width="200" height="56" rx="8" stroke-width="0.5"/><text class="th" x="540" y="444" text-anchor="middle" dominant-baseline="central">Medical leadership</text><text class="ts" x="540" y="462" text-anchor="middle" dominant-baseline="central">Strategic decisions</text></g>
+<line x1="540" y1="348" x2="540" y2="416" class="arr" marker-end="url(#arrow1)"/>
+<path d="M520 348 L520 390 L330 390 L330 416" class="arr" fill="none" marker-end="url(#arrow1)"/>
+<path d="M500 348 L500 380 L130 380 L130 416" class="arr" fill="none" marker-end="url(#arrow1)"/>
+</svg>
+</div>
+
+<h2>Outcome</h2>
+<ul>
+  <li><strong>Prescription adequacy</strong> nearly doubled across both services (from 36.3% to 69.4%). Internal Medicine improved by 24.2 percentage points, Surgery by 35.1 (p &lt; 0.0001).</li>
+  <li><strong>Target antibiotic consumption</strong> dropped 33.8%, from 17.77 to 11.76 DDD per 100 patient-days (p &lt; 0.0001).</li>
+  <li><strong>733 prescriptions audited</strong> across 89 cross-sections, enabling the committee to operate with a level of data depth not previously available.</li>
+  <li><strong>Estimated institutional savings exceeding 10 million ARS</strong> during the intervention window from reduced consumption.</li>
+  <li>Analytics outputs supported education sessions reaching <strong>87.5% of Surgery and 85% of Internal Medicine</strong> physicians.</li>
+  <li>Gap analysis submitted to medical leadership informed a roadmap for clinical information system improvements.</li>
+</ul>
+
+<h2>Stack</h2>
+<div class="stack-line">SQL Server Management Studio · Python · Clinical information system integration · Cross-functional stakeholder engagement</div>
+
+<div class="confidentiality">Project details abstracted to protect institutional and patient confidentiality.</div>
+
+</div>
+
+<footer>© 2026 Carolina Aloisio</footer>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey data pipeline and dashboard — Carolina Aloisio, PhD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><a href="index.html" style="color: inherit; text-decoration: none;">Carolina Aloisio, PhD</a></div>
+  <nav>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#capabilities">Capabilities</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<div class="case-hero">
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+  <h1>Citizen survey data pipeline and Power BI dashboard</h1>
+  <p class="one-liner">Cleaned and normalized a 507-record citizen survey on responsible pet ownership, built a reproducible Python pipeline with 13 documented transformations, and delivered an interactive Power BI dashboard that surfaced policy-actionable gaps between awareness and behavior.</p>
+  <div class="meta-tags">
+    <span class="tag">Public policy</span>
+    <span class="tag">Data engineering</span>
+    <span class="tag">Dashboarding</span>
+    <span class="tag">Python</span>
+    <span class="tag">Power BI</span>
+    <span class="tag edu">Applied coursework</span>
+  </div>
+</div>
+
+<div class="case-body">
+
+<h2>Context</h2>
+<p>Coursework project in collaboration with a local veterinary clinic, working with real survey data collected from residents of San Francisco, Córdoba, on responsible pet ownership, housing conditions, and perceptions of animal abandonment as a public policy issue. The dataset exhibited the full range of quality issues typical of free-form online surveys: typographic inconsistencies, duplicated categories, missing values, heterogeneous formats, and multi-select fields stored as concatenated text.</p>
+
+<h2>Problem</h2>
+<p>The raw data was unusable for analysis as collected. Geographic categories were fragmented by typographic variation, multi-select responses were impossible to aggregate, binary fields were stored as free text, and logical inconsistencies compromised statistical validity. The challenge was to deliver an auditable, reproducible cleaning process and translate the cleaned dataset into a dashboard that municipal stakeholders could use to make policy decisions.</p>
+
+<h2>My role</h2>
+<p>Member of a three-person team. Owned the design and dashboard development end of the project, including variable selection, KPI definition, visualization design, and the narrative tying analytical findings to policy implications.</p>
+
+<h2>Approach</h2>
+<ul>
+  <li><strong>Reproducible data pipeline:</strong> Built an automated Python script implementing 13 documented transformations, each with technical justification and validation checks. Pipeline runs end-to-end on the raw CSV and produces a normalized Excel dataset ready for analysis.</li>
+  <li><strong>Fuzzy matching for geographic normalization:</strong> Applied RapidFuzz with the Weighted Ratio algorithm against an official catalog of 52 neighborhoods, with Unicode normalization, diacritic removal, and a similarity threshold.</li>
+  <li><strong>One-hot encoding for multi-select fields:</strong> Decomposed semicolon-separated responses into 17 binary columns, enabling co-occurrence analysis and aggregations not possible in the raw format.</li>
+  <li><strong>Defensive imputation:</strong> Applied conservative logic to lifecycle-impossible values, preserving sample size without distorting distributions.</li>
+  <li><strong>Validation layer:</strong> Built referential integrity checks and frequency reports to detect logical inconsistencies before downstream analysis.</li>
+  <li><strong>Dashboard design:</strong> Selected variables based on relevance to public policy, ability to generate actionable insights, and communicative clarity. Built an interactive Power BI dashboard with KPI cards, geographic breakdowns, and cross-filtering between visualizations.</li>
+</ul>
+
+<h2>Pipeline architecture</h2>
+<div class="diagram-wrap">
+<svg width="100%" viewBox="0 0 680 540" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Pet care survey data pipeline</title>
+<defs><marker id="arrow4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<text class="th" x="40" y="30">Raw input</text>
+<g class="c-gray"><rect x="40" y="50" width="180" height="64" rx="8" stroke-width="0.5"/><text class="th" x="130" y="76" text-anchor="middle" dominant-baseline="central">Survey CSV</text><text class="ts" x="130" y="94" text-anchor="middle" dominant-baseline="central">507 records, 21 columns</text></g>
+<text class="th" x="260" y="30">Transformations</text>
+<g class="c-blue"><rect x="260" y="50" width="180" height="48" rx="8" stroke-width="0.5"/><text class="th" x="350" y="68" text-anchor="middle" dominant-baseline="central">Schema cleanup</text><text class="ts" x="350" y="86" text-anchor="middle" dominant-baseline="central">Drop, rename, retype</text></g>
+<g class="c-blue"><rect x="260" y="108" width="180" height="48" rx="8" stroke-width="0.5"/><text class="th" x="350" y="126" text-anchor="middle" dominant-baseline="central">Fuzzy matching</text><text class="ts" x="350" y="144" text-anchor="middle" dominant-baseline="central">52 official neighborhoods</text></g>
+<g class="c-blue"><rect x="260" y="166" width="180" height="48" rx="8" stroke-width="0.5"/><text class="th" x="350" y="184" text-anchor="middle" dominant-baseline="central">One-hot encoding</text><text class="ts" x="350" y="202" text-anchor="middle" dominant-baseline="central">17 binary columns</text></g>
+<g class="c-blue"><rect x="260" y="224" width="180" height="48" rx="8" stroke-width="0.5"/><text class="th" x="350" y="242" text-anchor="middle" dominant-baseline="central">Imputation, ordinal</text><text class="ts" x="350" y="260" text-anchor="middle" dominant-baseline="central">Defensive logic</text></g>
+<line x1="220" y1="82" x2="258" y2="74" class="arr" marker-end="url(#arrow4)"/>
+<line x1="220" y1="82" x2="258" y2="132" class="arr" marker-end="url(#arrow4)"/>
+<line x1="220" y1="82" x2="258" y2="190" class="arr" marker-end="url(#arrow4)"/>
+<line x1="220" y1="82" x2="258" y2="248" class="arr" marker-end="url(#arrow4)"/>
+<text class="th" x="480" y="30">Validation</text>
+<g class="c-teal"><rect x="480" y="80" width="160" height="48" rx="8" stroke-width="0.5"/><text class="th" x="560" y="98" text-anchor="middle" dominant-baseline="central">Integrity checks</text><text class="ts" x="560" y="116" text-anchor="middle" dominant-baseline="central">Logical consistency</text></g>
+<g class="c-teal"><rect x="480" y="138" width="160" height="48" rx="8" stroke-width="0.5"/><text class="th" x="560" y="156" text-anchor="middle" dominant-baseline="central">Frequency reports</text><text class="ts" x="560" y="174" text-anchor="middle" dominant-baseline="central">Anomaly detection</text></g>
+<g class="c-teal"><rect x="480" y="196" width="160" height="48" rx="8" stroke-width="0.5"/><text class="th" x="560" y="214" text-anchor="middle" dominant-baseline="central">Catalog matching</text><text class="ts" x="560" y="232" text-anchor="middle" dominant-baseline="central">15 records dropped</text></g>
+<line x1="440" y1="132" x2="478" y2="104" class="arr" marker-end="url(#arrow4)"/>
+<line x1="440" y1="132" x2="478" y2="162" class="arr" marker-end="url(#arrow4)"/>
+<line x1="440" y1="132" x2="478" y2="220" class="arr" marker-end="url(#arrow4)"/>
+<text class="th" x="40" y="320">Normalized dataset</text>
+<g class="c-purple"><rect x="40" y="340" width="260" height="64" rx="8" stroke-width="0.5"/><text class="th" x="170" y="366" text-anchor="middle" dominant-baseline="central">Normalized dataset</text><text class="ts" x="170" y="384" text-anchor="middle" dominant-baseline="central">492 records, 30 variables</text></g>
+<path d="M560 244 L560 290 L170 290 L170 338" class="arr" fill="none" marker-end="url(#arrow4)"/>
+<text class="th" x="380" y="320">Dashboard</text>
+<g class="c-coral"><rect x="380" y="340" width="260" height="64" rx="8" stroke-width="0.5"/><text class="th" x="510" y="366" text-anchor="middle" dominant-baseline="central">Interactive Power BI dashboard</text><text class="ts" x="510" y="384" text-anchor="middle" dominant-baseline="central">KPIs, geographic breakdowns</text></g>
+<line x1="300" y1="372" x2="378" y2="372" class="arr" marker-end="url(#arrow4)"/>
+<g class="c-amber"><rect x="40" y="440" width="600" height="68" rx="8" stroke-width="0.5"/><text class="th" x="340" y="462" text-anchor="middle" dominant-baseline="central">Policy-actionable findings for municipal stakeholders</text><text class="ts" x="340" y="482" text-anchor="middle" dominant-baseline="central">Awareness-action gap · Behavioral asymmetry · Geographic inequality</text><text class="ts" x="340" y="500" text-anchor="middle" dominant-baseline="central">Clear citizen mandate · Housing as predictor of responsible ownership</text></g>
+</svg>
+</div>
+
+<h2>Outcome</h2>
+<ul>
+  <li><strong>From 507 raw records to 492 validated records</strong> with 30 analytically usable variables (up from 21 unstructured originals), through 13 documented transformations.</li>
+  <li><strong>Awareness-action gap:</strong> 96.95% of respondents know about the free municipal castration service, but only 41.7% have used it — pointing to non-communicational barriers (access, logistics, capacity) as the binding constraint, not awareness.</li>
+  <li><strong>Behavioral asymmetry:</strong> Deworming reaches 96.34% adoption while castration sits at 82.72%, identifying castration as the priority intervention for population control.</li>
+  <li><strong>Persistent abandonment signal:</strong> 51.22% of respondents observe stray animals constantly, indicating that the abandonment problem is concentrated in populations not represented in the survey — a finding that reframes the policy challenge.</li>
+  <li><strong>Clear citizen mandate:</strong> 94.7% of respondents identified mass castration campaigns as the priority municipal intervention.</li>
+  <li><strong>Housing as predictor:</strong> Strong association between home ownership and responsible ownership practices, suggesting that housing stability is a structural variable in public health interventions.</li>
+</ul>
+
+<h2>Industrial relevance</h2>
+<p>This work demonstrates the full data analyst loop on a real, messy dataset: from raw input through engineering to stakeholder-facing visualization with actionable findings. For organizations working with survey data, customer feedback, CRM records, or any free-form input — which is most organizations — the combination of reproducible pipeline engineering and policy-grade analytical narrative is exactly the profile required to turn raw data into operational decisions.</p>
+
+<h2>Stack</h2>
+<div class="stack-line">Python · pandas · RapidFuzz · openpyxl · Power BI · Fuzzy matching · One-hot encoding · Ordinal encoding · Statistical validation</div>
+
+</div>
+
+<footer>© 2026 Carolina Aloisio</footer>
+
+</body>
+</html>
